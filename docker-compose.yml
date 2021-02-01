@@ -1,0 +1,10 @@
+version: '3.0'
+
+services:
+    view_w_proxy:
+        image: viewservice_w_proxy
+        ports:
+            - 80:80
+    avaloq:
+         image: avaloq
+         

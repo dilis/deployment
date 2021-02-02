@@ -1,8 +1,11 @@
 Introduction
 ============
 
-This contains the Dockerfile to create the deployment image for `viewservice`. The resulting
-image (`viewservice_w_proxy`) proxies `timeservice` using the **nginx** used to serve `viewservice`.  It does this by using the `location` directive to check if the URI is prefixed by `/api`. If it is, it will route the request to `timeservice` container.
+This contains the Dockerfile to create the deployment image for `viewservice` and the compose file to deploy the services.
+
+After the build, the resulting image (`viewservice_w_proxy`) will proxy `timeservice` using the **nginx** used to serve
+`viewservice`.  It does this by using the `location` directive to check if the URI is prefixed by `/api`. If it is, it will
+route the request to `timeservice` container.
 
 Building The `viewservice` Deployment Image
 -------------------------------------------
